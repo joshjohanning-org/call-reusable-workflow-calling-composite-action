@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  dev:
+    uses: joshjohanning-org/reusable-workflows/.github/workflows/reusable-workflow-call-composite-action.yml@add-composite-action
+    with:
+      environment: dev
